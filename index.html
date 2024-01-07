@@ -215,10 +215,7 @@
 
     <script src="scripts.js"></script>
     <script>
-        let count = 0;
-        setInterval(function () {
-            document.getElementById('downloadCount').textContent = 'Downloads: ' + count++;
-        }, 1000);
+       
               let downloadCount = parseInt(localStorage.getItem('downloadCount')) || 0;
 
         function incrementDownloads() {
