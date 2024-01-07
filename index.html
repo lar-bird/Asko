@@ -134,6 +134,27 @@
             font-size: 1.5em;
             margin-bottom: 20px;
         }
+        .download-counter {
+            font-size: 1.2em;
+            margin-top: 10px;
+            color: #777;
+        }
+
+        .download-counter span {
+            animation: bounce 1s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-20px);
+            }
+            60% {
+                transform: translateY(-10px);
+            }
+        }
     </style>
 </head>
 
@@ -165,6 +186,8 @@
             <a class="download-button" href="https://lar-bird.github.io/Asko/dot_v1.0a.zip" download="dot_v1.0a.zip">Download for Windows</a>
             <a class="download-button" href="https://lar-bird.github.io/Asko/Dot-linux.zip" download="Dot-linux.zip">Download for Linux</a>
         </div>
+        <div class="download-counter">Downloads: <span id="downloadCount">0</span></div>
+    
     </div>
 
     <div class="version-info">
@@ -189,7 +212,15 @@
 
     <script src="scripts.js"></script>
     <script>
+        let downloadCount = 0;
+
+        function incrementDownloads() {
+            downloadCount++;
+            document.getElementById('downloadCount').textContent = downloadCount;
+        }
+
         function downloadExe() {
+            incrementDownloads();
             // Update the URL with your GitHub Pages repository link
             window.location.href = "https://lar-bird.github.io/Asko/dot_v1.0a.zip";
         }
