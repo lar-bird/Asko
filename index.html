@@ -183,10 +183,10 @@
     <div class="download-container" id="download">
         <h2>Download Asko-DOT Chatbot</h2>
         <div class="download-buttons">
-            <a class="download-button" href="https://lar-bird.github.io/Asko/dot_v1.0a.zip" download="dot_v1.0a.zip">Download for Windows</a>
-            incrementDownloads();
-            <a class="download-button" href="https://lar-bird.github.io/Asko/Dot-linux.zip" download="Dot-linux.zip">Download for Linux</a>
-            incrementDownloads(); 
+            <a class="download-button" href="https://lar-bird.github.io/Asko/dot_v1.0a.zip" onclick="incrementDownloads()" download="dot_v1.0a.zip">Download for Windows</a>
+           
+            <a class="download-button" href="https://lar-bird.github.io/Asko/Dot-linux.zip" onclick="incrementDownloads()" download="Dot-linux.zip">Download for Linux</a>
+           
         </div>
         <div class="download-counter">Downloads: <span id="downloadCount">0</span></div>
     
@@ -214,13 +214,17 @@
 
     <script src="scripts.js"></script>
     <script>
-        let downloadCount = 0;
+              let downloadCount = parseInt(localStorage.getItem('downloadCount')) || 0;
 
         function incrementDownloads() {
             downloadCount++;
+            // Update the downloadCount in localStorage
+            localStorage.setItem('downloadCount', downloadCount);
             document.getElementById('downloadCount').textContent = downloadCount;
         }
 
+        // Set initial value of downloadCount on page load
+        document.getElementById('downloadCount').textContent = downloadCount;
         function downloadExe() {
             incrementDownloads();
             // Update the URL with your GitHub Pages repository link
