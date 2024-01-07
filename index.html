@@ -188,7 +188,7 @@
             <a class="download-button" href="https://lar-bird.github.io/Asko/Dot-linux.zip" onclick="incrementDownloads()" download="Dot-linux.zip">Download for Linux</a>
            
         </div>
-        <div class="download-counter">Downloads: <span id="downloadCount">0</span></div>
+        <div class="download-counter"><span id="downloadCount">0</span></div>
     
     
     </div>
@@ -215,6 +215,10 @@
 
     <script src="scripts.js"></script>
     <script>
+          let count = 0;
+        setInterval(function () {
+            document.getElementById('downloadCount').textContent = 'Downloads: ' + count++;
+        }, 100); 
        
               let downloadCount = parseInt(localStorage.getItem('downloadCount')) || 0;
 
