@@ -215,11 +215,18 @@
 
     <script src="scripts.js"></script>
     <script>
-          let count = 0;
-        setInterval(function () {
+   let count = 0;
+        const maxCount = 2000; // Set the maximum count
+        const interval = 1000; // 1000 milliseconds = 1 second (adjust as needed)
+
+        function updateCounter() {
             document.getElementById('downloadCount').textContent = 'Downloads: ' + count++;
-        }, 100); 
-       
+
+            // Check if the maximum count is reached
+            if (count > maxCount) {
+                clearInterval(counterInterval);
+            }
+        }
               let downloadCount = parseInt(localStorage.getItem('downloadCount')) || 0;
 
         function incrementDownloads() {
