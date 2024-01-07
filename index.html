@@ -67,6 +67,12 @@
             animation: fadeInUp 1s ease-out 0.5s forwards;
         }
 
+        .download-buttons {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+
         .download-button {
             background-color: #4682b4;
             color: white;
@@ -106,6 +112,28 @@
             border-radius: 5px;
             cursor: pointer;
         }
+
+        .guide-container {
+            background-color: #f5f5f5;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            margin: 20px;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 1s ease-out 1s forwards;
+        }
+
+        .guide-container h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        .guide-container p {
+            font-size: 1.5em;
+            margin-bottom: 20px;
+        }
     </style>
 </head>
 
@@ -131,22 +159,36 @@
         </ul>
     </div>
 
-<div class="download-container" id="download">
+    <div class="download-container" id="download">
         <h2>Download Asko-DOT Chatbot</h2>
-        <a class="download-button" href="https://lar-bird.github.io/Asko/Asko-Dot.exe" download="Asko-Dot.exe">Download Now</a>
+        <div class="download-buttons">
+            <a class="download-button" href="https://lar-bird.github.io/Asko/Asko-Dot.exe" download="Asko-Dot.exe">Download for Windows</a>
+            <a class="download-button" href="https://lar-bird.github.io/Asko/Asko-Dot-Linux.zip" download="Asko-Dot-Linux.zip">Download for Linux</a>
+        </div>
     </div>
-
 
     <div class="version-info">
         <h2>Asko-DOT v1.0 Available Now!</h2>
         <p>No cheats, no hacks, no worries! Train Asko-DOT and experience the next level of intelligent conversations.</p>
         <button class="exe-download-button" onclick="downloadExe()">Download .exe</button>
         <p>Report bugs to <a href="mailto:skyking5256@gmail.com">skyking5256@gmail.com</a></p>
-        <p>Share your responses text and get an opportunity to be showcased on the website: <a href="mailto:skyking5256@gmail.com?subject=Asko-DOT%20Response%20Submission&body=Share%20your%20responses%20text%20here.">Submit Responses</a></p>
+        <p>Share your responses text and get an opportunity to be showcased on the website: <a
+                href="mailto:skyking5256@gmail.com?subject=Asko-DOT%20Response%20Submission&body=Share%20your%20responses%20text%20here.">Submit
+                Responses</a></p>
+    </div>
+
+    <div class="guide-container">
+        <h2>Installation Guide</h2>
+        <p>Follow the steps below to install Asko-DOT Chatbot:</p>
+        <ol>
+            <li>Download the appropriate version for your operating system.</li>
+            <li>For Windows: Simply click on the "Download for Windows" button and run the downloaded .exe file.</li>
+            <li>For Linux: Click on the "Download for Linux" button and unzip the downloaded file. Open Asko_run.sh and follow the instructions.</li>
+        </ol>
     </div>
 
     <script src="scripts.js"></script>
- <script>
+    <script>
         function downloadExe() {
             // Update the URL with your GitHub Pages repository link
             window.location.href = "https://lar-bird.github.io/Asko/Asko-Dot.exe";
