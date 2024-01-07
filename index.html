@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asko-DOT Chatbot</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Calibri', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+
+        .hero {
+            background: linear-gradient(to right, #4682b4, #5e99c1);
+            color: white;
+            text-align: center;
+            padding: 80px;
+            opacity: 0;
+            transform: scale(0.9);
+            animation: fadeIn 1s ease-out forwards;
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        .hero h1 {
+            font-size: 3.5em;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.5em;
+            margin-top: 20px;
+        }
+
+        .feature {
+            background-color: #fff;
+            padding: 40px 20px;
+            margin: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 1s ease-out forwards;
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .download-container {
+            text-align: center;
+            margin: 40px 0;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 1s ease-out 0.5s forwards;
+        }
+
+        .download-button {
+            background-color: #4682b4;
+            color: white;
+            padding: 15px 30px;
+            font-size: 1.2em;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .version-info {
+            background-color: #333;
+            color: white;
+            padding: 40px;
+            text-align: center;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 1s ease-out 1s forwards;
+        }
+
+        .version-info h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        .version-info p {
+            font-size: 1.5em;
+            margin-bottom: 20px;
+        }
+
+        .exe-download-button {
+            background-color: #4682b4;
+            color: white;
+            padding: 15px 30px;
+            font-size: 1.2em;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="hero">
+        <h1>Welcome to Asko-DOT Chatbot</h1>
+        <p>Enhance your conversations with our intelligent and interactive chatbot. Train it easily and teach it everything!</p>
+    </div>
+
+    <div class="feature" id="features">
+        <h2>Key Features</h2>
+        <p>
+            Asko-DOT Chatbot is not just a chatbot; it's your companion in conversation. With its intuitive interface,
+            you can train it effortlessly and customize responses to make every interaction unique. Here are some key features:
+        </p>
+        <ul>
+            <li><strong>Trainability:</strong> Easily train Asko-DOT by providing keywords and responses.</li>
+            <li><strong>Customizable Responses:</strong> Tailor the chatbot's answers to suit your preferences.</li>
+            <li><strong>User-Friendly Interface:</strong> Simple and interactive chat interface for smooth communication.</li>
+            <li><strong>Educational Interaction:</strong> Train the chatbot for a dynamic and learning conversation.</li>
+            <li><strong>About and Help Sections:</strong> Gain insights and guidance for effective interaction.</li>
+            <li><strong>Copy and Download Responses:</strong> Share and manage responses seamlessly.</li>
+        </ul>
+    </div>
+
+<div class="download-container" id="download">
+        <h2>Download Asko-DOT Chatbot</h2>
+        <a class="download-button" href="https://lar-bird.github.io/Asko/Asko-DOT.exe" download="Asko-DOT.exe">Download Now</a>
+    </div>
+
+
+    <div class="version-info">
+        <h2>Asko-DOT v1.0 Available Now!</h2>
+        <p>No cheats, no hacks, no worries! Train Asko-DOT and experience the next level of intelligent conversations.</p>
+        <button class="exe-download-button" onclick="downloadExe()">Download .exe</button>
+    </div>
+
+    <script src="scripts.js"></script>
+ <script>
+        function downloadExe() {
+            // Update the URL with your GitHub Pages repository link
+            window.location.href = "https://lar-bird.github.io/Asko/Asko-DOT.exe";
+        }
+    </script>
+</body>
+
+</html>
